@@ -1,6 +1,11 @@
+import Banner from "../../components/Banner"
+
 const HomePage = () => {
     return(
-        <div>Olá Mundo</div>
+        <div>
+            Olá Mundo
+            <Banner/>
+        </div>
     )
 }
 
