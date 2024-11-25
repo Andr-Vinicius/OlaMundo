@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom"
 import posts from "../../json/posts.json"
 import PostModel from "../PostModel"
 import ReactMarkdown from "react-markdown"
+import NotFound from "../../pages/NotFound"
+import DefaultPage from "../DefaultPage"
 
 const Post = () => {
 
@@ -10,17 +12,28 @@ const Post = () => {
         return post.id === Number(parameters.id)
     })
 
+    //const recommendedPost = post.filter((post) => post.id !== Number(parameters.id))
+        //.sort((a, b) => b.id - a.id)
+        //.slice(0, 4)
+
     // Se for undefined
     if (!post){
-        return <h1>Post não encontrado...</h1>
+        return <NotFound/>
     }
 
     return (
-        <PostModel titulo={post.titulo}>
-            <ReactMarkdown>
-                {post.texto}
-            </ReactMarkdown>
-        </PostModel>
+        <Routes>
+            <Route path="*" element={<DefaultPage/>}>
+                <Route index element={
+                    <PostModel titulo={post.titulo}>
+                        <ReactMarkdown>
+                            {post.texto}
+                        </ReactMarkdown>
+                    </PostModel>
+                }/>
+            </Route>
+        </Routes>
+
     )
 }
 

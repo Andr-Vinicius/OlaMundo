@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Post.css"
+import Button from "../Button"
 
 const PostCard = ({post}) => {
     return(
@@ -7,7 +8,7 @@ const PostCard = ({post}) => {
             <div>
                 <img src="" alt="foto do post"/>
                 <h3>{post.titulo}</h3>
-                <button>Saiba mais</button>
+                <Button children="Saiba mais"/>
             </div>
         </Link>
 
