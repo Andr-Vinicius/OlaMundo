@@ -1,11 +1,16 @@
 import Banner from "../../components/Banner"
+import Post from "../../components/Post"
+import posts from "../../json/posts.json"
 
 const HomePage = () => {
     return(
-        <div>
-            Olá Mundo
-            <Banner/>
-        </div>
+        <ul>
+            {posts.map(post => 
+                <li key={post.id}>
+                    <Post post={post}/>
+                </li>
+            )}
+        </ul>
     )
 }
 
