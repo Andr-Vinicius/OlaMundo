@@ -4,6 +4,8 @@ import AboutMe from './pages/AboutMe'
 import Menu from "./components/Menu"
 import Footer from "./components/Footer"
 import DefaultPage from "./components/DefaultPage"
+import Post from "./components/Post"
+import NotFound from "./pages/NotFound"
 
 
 
@@ -17,8 +19,9 @@ function AppRoutes() {
         <Route path="/" element={<DefaultPage/>}>
           <Route index element={<HomePage />} />
           <Route path="sobremim" element={<AboutMe />} />
+          <Route path="posts/:id" element={<Post/>}/>
         </Route>
-        <Route path="*" element={<p style={{color: 'red'}}>Página Não Encontrada</p>} />
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
