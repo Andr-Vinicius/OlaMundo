@@ -2,13 +2,20 @@ import "./Banner.css"
 
 const Banner = () => {
     return(
-        <section className="banner">
-            <div>
-                <h1>Olá, Mundo!</h1>
-                <p>çnidnfinsfinsienfienfiefeifjeifiefn</p>
+        <div className="banner">
+            <div className="apresentacao">
+                <h1>Blog pessoal</h1>
+                <p>Bem vindos ao meu blog pessoal, 
+                por favor confiram o conteúdo abaixo</p>
             </div>
-            <img href="../../../public/fotoperfil.jpeg" alt="Foto de perfil"/>
-        </section>
+            <div className="images">
+                <img  
+                    className="perfil" 
+                    src="../../../public/foto_perfil.jpg" 
+                    alt="Foto de perfil"      
+                />
+            </div>
+        </div>
     )
 }
 

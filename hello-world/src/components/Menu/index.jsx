@@ -5,7 +5,7 @@ import MenuLink from "../MenuLink";
 const Menu = () => {
 
     return(
-        <header>
+        <header className="menu">
             <nav className="navigation">
                 <MenuLink to="/">Inicio</MenuLink>
                 <MenuLink to="/sobremim">Sobre Mim</MenuLink>

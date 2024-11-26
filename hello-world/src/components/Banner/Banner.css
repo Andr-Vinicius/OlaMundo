@@ -1,7 +1,31 @@
 .banner{
-    background-color: rgba(4, 101, 165, 0.897);
+    background-color: #041833;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-img{
-    max-width: 50%;
+.banner h1{
+    font-size: 4rem;
+    margin-top: 4.875rem;
+    margin-bottom: 2rem;    
+}
+
+.banner p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.images{
+    position: relative;
+    height: 406px;    
+}
+
+.perfil{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 18vw;
+    border-radius: 50%;
 }
